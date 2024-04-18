@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: system-ui;
+    font-size: 2rem;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .left,
+  .right {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left {
+    position: relative;
+    span {
+      z-index: 20;
+    }
+  }
+  
+  .left::after {
+    content: "";
+    position: absolute;
+    background: white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    transform: skew(-25deg);
+    z-index: 10;
+  }
+  
+  .right {
+    position: relative;
+    text-align: right;
+    span {
+      z-index: 20;
+    }
+  }
+  
+  .right::before {
+    content: "";
+    position: absolute;
+    background-image: "/assets/city.jpg";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    transform: skew(-25deg);
+    z-index: 10;
+  }
+  
